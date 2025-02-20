@@ -48,9 +48,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'blog.middlewares.Trackip',
-    'blog.middlewares.LogUserMiddleware',
-    # 'blog.middlewares.RequestLoggingMiddleware',
+    'blog.middlewares.TrackUserLoginMiddleware',
+    # 'blog.middlewares.LogUserMiddleware',
 ]
 
 ROOT_URLCONF = 'trackip.urls'
@@ -109,9 +108,9 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
-USE_I18N = True
+USE_I18N = False
 
 USE_TZ = True
 

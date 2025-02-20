@@ -22,8 +22,8 @@
 {% block content %}
     <div class="col-sm-10">
            <h3 class="text-white my-5" >Dashboard Page</h3>
-           <a href="{% url 'addpost' %}" class="btn btn-info">ADD Post</a>
-            <h4 class="text-center alert alert-info mt-3"><i>Show Post Information </i></h4>
+           {% comment %} <a href="{% url 'addpost' %}" class="btn btn-info">ADD Post</a> {% endcomment %}
+            {% comment %} <h4 class="text-center alert alert-info mt-3"><i>Show Post Information </i></h4>
             {% if post %}
                 <table class="table table-hover bg-white">
                     <thead>
@@ -41,8 +41,8 @@
                             <td>{{post.title}}</td>
                             <td>{{post.desc}}</td>
                             <td class="text-center">
-                                <a href="{% url 'updatepost' post.id %}" class="btn btn-warning bt-sm">Edit</a>
-                                {% if perms.blog.delete_post %}
+                                {% comment %} <a href="{% url 'updatepost' post.id %}" class="btn btn-warning bt-sm">Edit</a> {% endcomment %}
+                                {% comment %} {% if perms.blog.delete_post %}
                                 <form action="{% url 'deletepost' post.id %}" method="post" class="d-inline">
                                     {% csrf_token %}
                                     <input type="submit" class="btn btn-danger btn-sm" value="Delete">
@@ -55,7 +55,7 @@
                 </table>
             {% else %}
                 <h4 class="text-centeralertalert-warning">No Record</h4>
-            {% endif %}    
+            {% endif %}     {% endcomment %}
     </div>
 
 {% endblock content %}

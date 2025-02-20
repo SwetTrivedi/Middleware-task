@@ -10,4 +10,4 @@ class PostAdmin (admin.ModelAdmin):
 
 @admin.register(Userinfo)
 class UserinfoAdmin(admin.ModelAdmin):
-    list_display=('id','clientip','clientcount','clientname','clienttime')
+    list_display=('id','clientip','clientcount','clientname','clienttime','clienturl','clientview')
